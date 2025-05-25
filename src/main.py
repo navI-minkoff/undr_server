@@ -1,12 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
-from src.models.base import Base
 from src.routers import users, auth
 from src.database import engine
-from src.models import user, token
+from src.models.base import Base
+from src.models.user import User
+from src.models.token import Token
 
-# Инициализация базы данных
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Token Auth API")

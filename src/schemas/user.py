@@ -9,7 +9,7 @@ class UserBase(BaseModel):
 
 
 class UserCreate(UserBase):
-    password: str
+    role: RoleEnum
 
 
 class UserResponse(UserBase):

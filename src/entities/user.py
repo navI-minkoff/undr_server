@@ -9,7 +9,12 @@ class RoleEnum(str, Enum):
 
 
 class UserEntity:
-    def __init__(self, id: int, username: str, telegram_id: int, role: RoleEnum, created_at: datetime):
+    def __init__(self
+                 , id: int
+                 , username: str
+                 , telegram_id: int
+                 , role: RoleEnum
+                 , created_at: datetime):
         self.id = id
         self.username = username
         self.telegram_id = telegram_id
